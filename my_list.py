@@ -1,6 +1,11 @@
 
 class Abstract_list:
     def add(self, el):
+        """
+
+        :param el:
+        :return:
+        """
         raise NotImplementedError('add must be define')
 
     def remove(self,el):
@@ -15,9 +20,10 @@ class Mylist(Abstract_list):
         self.list.append(el)
     def remove(self,el):
         self.list.remove(el)
-
     def to_string(self):
         return self.list
+    def sorted(self):
+        return self.list.sort()
 
 m = Mylist()
 m.to_string()
